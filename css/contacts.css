@@ -1,0 +1,119 @@
+.contacts__wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.contacts__item {
+	margin-bottom: 36px;
+}
+
+.contacts__item--info {
+	width: 600px;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: top left;
+	background-color: #f7f7f7;
+	padding-top: 53px;
+	padding-bottom: 45px;
+	padding-left: 30px;
+	padding-right: 70px;
+}
+
+.contacts__item--data {
+	width: -webkit-calc(100% - 600px);
+	width: calc(100% - 600px);
+}
+
+.contacts__item--data iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.contacts__title {
+	font-size: 36px;
+	line-height: 1;
+	color: #3d4852;
+	text-transform: uppercase;
+	font-weight: 200;
+	padding-left: 38px;
+	padding-bottom: 40px;
+}
+
+.contacts__block {
+	max-width: 280px;
+	margin-left: auto;
+}
+
+.contacts__box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-bottom: 17px;
+}
+
+.contacts__box--inner {
+	margin-bottom: 32px;
+}
+
+.contacts__col {
+	min-width: 20px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin-right: 18px;
+}
+
+.contacts__data {
+	font-size: 14px;
+	line-height: 1.25;
+	color: #3d4852;
+	font-weight: 200;
+	text-transform: uppercase;
+}
+
+.contacts__data--phone {
+	font-size: 30px;
+}
+
+@media screen and (max-width: 960px) {
+
+.contacts__item--info {
+	width: 100%;
+	padding-top: 95px;
+	margin-bottom: 0px;
+	padding-left: 45px;
+	padding-right: 20px;
+}
+
+.contacts__item--data {
+	width: 100%;
+}
+
+.contacts__item--data iframe {
+	min-height: 300px;
+	max-height: 80vh;
+}
+
+.contacts__data--phone {
+	font-size: 23px;
+}
+
+}
+

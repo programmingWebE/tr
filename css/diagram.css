@@ -1,0 +1,94 @@
+.diagram__title {
+	font-size: 36px;
+	line-height: 1;
+	color: #333333;
+	text-transform: uppercase;
+	font-weight: 200;
+	padding-bottom: 35px;
+}
+
+.diagram__title span {
+	display: block;
+	font-size: 18px;
+	line-height: 1.6;
+	color: #53ceb8;
+	font-weight: 200;
+	text-transform: uppercase;
+	padding-top: 5px;
+}
+
+.diagram__box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.diagram__col {
+	margin-bottom: 60px;
+}
+
+.diagram__col--content {
+	width: 400px;
+	padding: 40px 35px;
+	-webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.diagram__col--data {
+	width: -webkit-calc(100% - 400px);
+	width: calc(100% - 400px);
+	padding-right: 15px;
+}
+
+.diagram__subtitle {
+	font-size: 24px;
+	line-height: 1.25;
+	color: #333333;
+	font-weight: 200;
+	text-transform: uppercase;
+	border-bottom: 2px solid rgba(83, 206, 184, 0.5);
+	padding-bottom: 28px;
+	margin-bottom: 25px;
+}
+
+.diagram__text p {
+	font-size: 16px;
+	line-height: 1.8;
+	color: #555555;
+	font-weight: 200;
+}
+
+canvas {
+	height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+
+.diagram__title {
+	font-size: 23px;
+}
+
+.diagram__col {
+	margin-bottom: 35px;
+}
+
+.diagram__col--content {
+	width: 100%;
+	padding: 25px 20px;
+}
+
+.diagram__col--data {
+	width: 100%;
+	padding-right: 0px;
+}
+
+.diagram__subtitle {
+	font-size: 20px;
+}
+
+}
+

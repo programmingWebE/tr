@@ -1,0 +1,61 @@
+.price {
+	padding-top: 60px;
+}
+
+.price__wrap {
+	position: relative;
+	z-index: 3;
+}
+
+.price__box {
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+	border-top: 2px solid #a30049;
+	padding: 35px 40px;
+}
+
+.price__block {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.price__block table {
+	width: 100%;
+	min-width: 500px;
+}
+
+.price__block table tr {
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.price__block table tr td,
+.price__block table tr th {
+	width: 50%;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #191919;
+	padding: 5px 15px;
+	text-transform: uppercase;
+	font-weight: 200;
+}
+
+.price__block table tr th {
+	background-color: #efefef;
+	font-weight: bold;
+}
+
+.price__block table tr td[colspan],
+.price__block table tr th[colspan] {
+	width: 100%;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+
+.price__box {
+	padding: 30px 20px;
+}
+
+}
+

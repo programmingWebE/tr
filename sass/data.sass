@@ -1,0 +1,88 @@
+@import 'responsive'
+
+.data
+	position: relative
+	z-index: 1
+	background-image: linear-gradient(to right, #ffffff 50%, #f0f0f0 50%)
+	padding: 40px 0
+	margin-bottom: 100px
+	+media(md)
+		margin-bottom: 32px
+		background-color: #fff
+		background-image: none
+		padding: 0px
+
+	.container
+		+media(sm)
+			padding: 0px	
+
+	&__item
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		outline: none
+		padding-top: 7%
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.2)
+		+media(md)
+			box-shadow: none
+			
+	.slick-prev,
+	.slick-next
+		position: absolute
+		z-index: 22
+		top: calc(50% - 25px)
+		width: 50px
+		height: 50px
+		overflow: hidden
+		background-color: transparent
+		border: 1px solid #fff
+		border-radius: 50%
+		outline: none
+		cursor: pointer
+		transition: 0.3s background-color
+		+media(sm)
+			width: 32px
+			height: 32px
+			top: calc(50% - 16px)
+
+		&:before
+			content: ' '
+			position: absolute
+			top: calc(50% - 6px)
+			right: calc(50% - 10px)
+			width: 12px
+			height: 12px
+			border-top: 1px solid #fff
+			border-right: 1px solid #fff
+			transform: rotate(45deg)
+			transition: 0.3s border
+			+media(sm)
+				width: 10px
+				height: 10px
+				top: calc(50% - 5px)
+				right: calc(50% - 8px)
+		&:after
+			content: ' '
+			position: absolute
+			top: calc(50% - 0.5px)
+			right: calc(50% - 10px)
+			width: 20px
+			height: 1px
+			background-color: #fff
+			+media(sm)
+				width: 16px
+				right: calc(50% - 8px)
+		&:hover
+			background-color: rgba(255, 255, 255, 0.5)
+
+
+	.slick-prev
+		left: 35px
+		transform: scaleX(-1)
+		+media(sm)
+			left: 15px
+
+	.slick-next
+		right: 35px
+		+media(sm)
+			right: 15px

@@ -1,0 +1,124 @@
+.info {
+	margin-bottom: 112px;
+}
+
+.info__wrap {
+	position: relative;
+	padding: 45px 0;
+	background: #f2f2f2;
+	-webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.info__item--text {
+	width: 50%;
+	position: relative;
+	margin-left: auto;
+	padding-left: 35px;
+	padding-right: 70px;
+}
+
+.info__item--text:after {
+	position: absolute;
+	content: ' ';
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0px;
+	width: 4px;
+	height: -webkit-calc(100% - 40px);
+	height: calc(100% - 40px);
+	background-color: #fff;
+}
+
+.info__item--image {
+	max-width: 785px;
+	position: absolute;
+	left: -18%;
+	padding-right: 20px;
+}
+
+.info__item--image img {
+	display: block;
+	width: 100%;
+}
+
+.info__title {
+	max-width: 415px;
+	font-size: 24px;
+	line-height: 1.5;
+	color: #3d4852;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 40px;
+}
+
+.info__text {
+	padding-bottom: 45px;
+}
+
+.info__text p {
+	font-size: 16px;
+	line-height: 2;
+	color: #3d4852;
+	font-weight: 200;
+}
+
+.info__btn {
+	font: inherit;
+	cursor: pointer;
+	display: block;
+	max-width: 219px;
+	width: 100%;
+	color: #3d4852;
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: 400;
+	text-transform: uppercase;
+	border: 1px solid #3d4852;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	text-align: center;
+	outline: none;
+	padding: 6px 14px;
+	-webkit-transition: 0.3s background-color, 0.3s color;
+	-o-transition: 0.3s background-color, 0.3s color;
+	transition: 0.3s background-color, 0.3s color;
+}
+
+.info__btn:hover {
+	background-color: #3d4852;
+	color: #fff;
+}
+
+@media screen and (max-width: 1150px) {
+
+.info__wrap {
+	padding: 40px 20px;
+}
+
+.info__item {
+	width: 100%;
+}
+
+.info__item--text {
+	padding: 0px;
+	padding-left: 20px;
+}
+
+.info__item--image {
+	position: static;
+	max-width: 100%;
+	padding-right: 0px;
+	margin-bottom: 30px;
+}
+
+.info__title {
+	font-size: 20px;
+	line-height: 1.2;
+	padding-bottom: 30px;
+}
+
+}
+

@@ -1,0 +1,108 @@
+.select-category .jq-selectbox {
+	width: 100%;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	border: 1px solid #caced1;
+}
+
+.select-category .jq-selectbox:hover .jq-selectbox__trigger-arrow {
+	border-top: 5px solid #666666;
+}
+
+.select-category .jq-selectbox__select {
+	font-family: Roboto-Regular;
+	background: transparent;
+	width: 100%;
+	height: auto;
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+	color: #3d4852;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	padding-right: 35px;
+	padding-left: 15px;
+	text-transform: uppercase;
+}
+
+.select-category .jq-selectbox__select-text {
+	font-family: Montserrat;
+	font-size: 16px;
+	padding: 4px 0;
+	text-align: left;
+	color: #3d4852;
+	width: 100% !important;
+	height: auto;
+}
+
+.select-category .jq-selectbox.focused .jq-selectbox__select {
+	border: 0;
+}
+
+.select-category .jq-selectbox__trigger {
+	border: 0;
+	background-color: transparent;
+}
+
+.select-category .jq-selectbox__trigger:hover .jq-selectbox__trigger-arrow {
+	border-top: 5px solid #fff;
+}
+
+.select-category .jq-selectbox__trigger::after {
+	position: absolute;
+	content: ' ';
+	top: 12px;
+	right: 15px;
+	width: 10px;
+	height: 10px;
+	border-left: 1px solid #3d4852;
+	border-top: 1px solid #3d4852;
+	-webkit-transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	transform: rotate(225deg);
+	-webkit-transition: 0.3s border, 0.3s top;
+	-o-transition: 0.3s border, 0.3s top;
+	transition: 0.3s border, 0.3s top;
+}
+
+.select-category .jq-selectbox__trigger-arrow {
+	border: none;
+	top: 25px;
+}
+
+.select-category .jq-selectbox__dropdown {
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	border: 1px solid #b58b59;
+	overflow: hidden;
+	max-width: 100%;
+	margin-top: 3px;
+}
+
+.select-category .jq-selectbox__dropdown ul {
+	max-height: 250px;
+	overflow: auto;
+}
+
+.select-category .jq-selectbox li {
+	position: relative;
+	font-family: Montserrat;
+	font-size: 14px;
+	padding: 8px 10px 8px 20px;
+	text-align: left;
+	white-space: normal;
+	background-color: #fff;
+	text-transform: uppercase;
+}
+
+.select-category .jq-selectbox li:hover {
+	background-color: #b58b59;
+	color: #fff;
+}
+
+.select-category .jq-selectbox li.sel {
+	background-color: #4d3b25;
+	color: #fff;
+}
+

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Romira</title>
+
+		<link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+ <svg style="display: none;">
+   <g id="icon-brand">
+     <path d="M138.63 30.6C196.3 2.61 264.04-3.28 325.93 13.03c61.69 16.08 117.38 55.52 151.26 109.74 21.45 33.98 33.4 73.7 34.81 113.83v13.79c-1.27 35.75-10.76 71.22-28.1 102.55-16.6 30.23-39.97 56.6-67.48 77.34-33.92 25.66-74.28 42.6-116.25 49.29-38.56 6.27-78.43 4.24-116.13-5.99-24.16 11.24-48.28 22.59-72.47 33.75-6.07 3.27-14.11-1.45-14.38-8.27-2.12-24.07-4.1-48.16-6.16-72.24-26.89-21.28-49.59-48-65.37-78.5C9.88 318.18 1.24 284.46 0 250.48V236.6c1.51-46.34 17.44-92.06 45.3-129.13 24.16-32.78 56.71-59.17 93.33-76.87m29.27 9.34C124.28 56.22 85.34 85.4 58.51 123.56c-18.94 26.77-31.65 57.98-36.38 90.45-5.47 37.44-.33 76.34 14.66 111.07 14.37 33.59 37.66 63.13 66.3 85.71 3.15 2.41 6.94 5 7.36 9.31 1.97 21.04 3.59 42.11 5.44 63.15 21.1-9.74 42.1-19.66 63.2-29.39 3.91-1.92 8.2-.13 12.1.87 60.09 16.03 126.21 9.03 181.2-20.21 33.07-17.55 62.15-42.89 83.17-73.95 26.22-38.19 39.34-85.29 35.91-131.55-3.26-47.8-24.16-93.78-56.8-128.68-25.59-27.66-58.07-48.76-93.49-61.52C285.7 18.75 223.1 19.11 167.9 39.94z" />
+     <path d="M203.82 151.84c6.25-6.99 17.96-7.83 25.14-1.79 20.34 17.61 40.46 35.49 60.82 53.08 38.26-15.26 76.56-30.42 114.84-45.64 6.46-2.72 14.41-1.44 19.6 3.31 7.49 6.38 8.14 18.77 1.57 26.03-41.2 47.44-82.52 94.77-123.75 142.18-2.13 2.54-4.43 5.07-7.44 6.57-6.53 3.52-15.12 2.49-20.67-2.4-20.02-17.45-39.94-35.02-59.97-52.45-35.36 15.05-70.71 30.16-106.07 45.2-6.51 2.94-14.58 1.75-19.94-2.97-7.16-5.92-8.48-17.45-2.81-24.82 9.92-13.09 19.9-26.12 29.89-39.15 3.11-4.36 9.82-5.28 14-1.92 4.3 3.08 5.2 9.7 1.96 13.87-8.75 11.6-17.63 23.11-26.44 34.67 35.77-15.21 71.51-30.48 107.26-45.72 3.54-1.61 7.87-.84 10.74 1.76 21.14 18.45 42.22 36.98 63.36 55.42 40.33-46.33 80.68-92.64 121-138.98-38.1 15.12-76.17 30.29-114.28 45.39-3.75 1.85-8.54 1.53-11.66-1.41-21.15-18.5-42.31-37-63.44-55.54-10.17 11.47-20.16 23.11-30.36 34.55-3.29 3.83-9.56 4.42-13.49 1.24-4.42-3.21-5.22-10.18-1.57-14.27 10.52-12.11 21.1-24.18 31.71-36.21z" />
+     <path d="M148.2 220.24c6.64-2.55 14.3 3.76 13.09 10.76-.69 7.26-10.24 11.38-15.89 6.65-6.39-4.31-4.59-15.31 2.8-17.41z" />
+   </g>
+   <g id="icon-telegram">
+     <path d="M490.6 22.28c9.39-3.86 20.54 3.54 21.4 13.47v2.52c-27.55 138.71-55.63 277.31-83.34 415.98-.64 4.09-2.25 8.18-5.45 10.95-5.12 4.71-13.3 5.45-19.16 1.7-44.41-25.33-88.85-50.6-133.26-75.92-18.19 24.09-36.24 48.3-54.49 72.35-4.77 6.38-14.45 7.79-21.04 3.46-4.72-2.84-7.57-8.28-7.4-13.76-.06-47.34.01-94.67-.04-142.01-.41-5.44.89-11.32 5.17-15.03 22.4-19.94 44.94-39.72 67.29-59.72-36.95 21.37-73.79 42.92-110.73 64.3-4.67 2.85-10.75 3.1-15.62.6-41.61-20.76-83.25-41.5-124.87-62.24-4.99-2.34-8.38-7.32-9.06-12.75v-3.01c.6-5.76 4.26-11.17 9.72-13.33C169.99 147.28 330.31 84.81 490.6 22.28M55.36 226.36c28.51 13.96 56.86 28.27 85.29 42.39 81-47.07 161.99-94.15 242.97-141.25 3.12-1.83 6.85-2.83 10.45-2.13 8.38 1.29 14.74 9.96 13.52 18.34-.46 3.99-2.83 7.48-5.82 10.04-60.64 53.73-121.29 107.45-181.92 161.19-.01 30.16-.02 60.32 0 90.47 11.48-15.09 22.75-30.34 34.26-45.41 5.13-6.56 15.17-7.57 21.88-2.88 41.73 23.79 83.5 47.5 125.19 71.35 24.47-121.84 48.9-243.69 73.37-365.53-139.76 54.4-279.44 109-419.19 163.42z" />
+   </g>
+   <g id="icon-viber">
+     <path d="M12.63 0h3.41c3.72.45 8.28.98 10.37 4.55 3.2 5.5 3.19 13.11-.59 18.32-3.35 3.78-8.94 3.49-13.55 3.6-1.07 1.18-2.13 2.38-3.24 3.53H7.64c-.13-1.43-.25-2.86-.38-4.29C-.12 22.56-1.06 12.69 1.77 6.1 3.31 1.59 8.43.38 12.63 0M6.58 3.71C2.43 6.24 2.7 11.87 2.9 16.11c.07 3.37 2.14 6.4 5.3 7.59.05 1.89.08 3.77.14 5.66 1.43-1.63 2.82-3.29 4.16-4.98 3.62-.16 7.6-.08 10.75-2.13 3-2.45 2.92-6.72 2.91-10.25-.14-3.21-.87-7.35-4.31-8.61-4.86-1.69-10.54-1.86-15.27.32z" />
+     <path d="M6.54 8.87C7.32 7.65 8.29 6.57 9.65 6c.96 1.32 1.9 2.66 2.8 4.03l-1.85 2.09c.95 2.4 2.65 4.45 5.17 5.27.53-.47 1.58-1.42 2.11-1.89 1.41.98 2.71 2.1 3.9 3.33-.89.95-1.79 1.89-2.7 2.82-6.01-2-10.49-6.86-12.54-12.78z" />
+   </g>
+   <g id="icon-full">
+     <path d="M16.11 0h122.12c8.38.59 15.74 7.62 16.42 16.03 1.27 9.76-6.95 19.37-16.8 19.58-25.64.14-51.29.01-76.93.06 37.22 37.24 74.46 74.46 111.69 111.69 3.94 3.6 7.72 7.99 8.19 13.55 1.25 8.61-4.78 17.45-13.23 19.45-6.05 1.63-12.79-.3-17.15-4.76-38.27-38.21-76.48-76.49-114.75-114.7-.04 25.38.03 50.76-.03 76.14.01 5.85-3.09 11.58-8.01 14.76-5.73 3.88-13.75 3.9-19.51.06-4.64-2.93-7.57-8.1-8.12-13.52V16.33C.68 7.93 7.74.84 16.11 0zM373.62 0h122.01c8.43.67 15.53 7.76 16.37 16.15v122.04c-.57 9.11-8.86 16.87-18.03 16.54-9.41.14-17.83-8.3-17.61-17.72-.05-25.36.01-50.72-.03-76.08-37.07 37.05-74.14 74.11-111.19 111.18-3.43 3.6-7.18 7.39-12.26 8.38-8.61 2.18-18.19-3.21-20.86-11.65-2.24-6.32-.45-13.77 4.36-18.42 38.23-38.26 76.5-76.48 114.72-114.74-25.37-.04-50.74.02-76.11-.03-9.42.2-17.87-8.2-17.72-17.61C356.92 8.92 364.59.68 373.62 0zM153.96 332.83c3.85-3.93 9.54-5.94 15-5.16 8.16.9 15 8.13 15.46 16.33.6 6-2.4 11.72-6.8 15.62-38.91 38.9-77.8 77.8-116.69 116.71 23.36 0 46.71.01 70.07 0 4.84-.03 10.02-.4 14.37 2.13 7.22 3.73 11.05 12.76 8.69 20.54-1.87 7.09-8.49 12.35-15.74 13H16.44C7.99 511.35.84 504.26 0 495.84V373.82c.56-9.09 8.81-16.87 17.97-16.55 9.43-.2 17.87 8.24 17.68 17.68.06 25.38-.01 50.76.04 76.14 39.44-39.4 78.83-78.85 118.27-118.26zM337.36 329.39c6.72-3.48 15.48-1.98 20.72 3.46 39.43 39.39 78.82 78.82 118.25 118.22.03-25.36-.02-50.72.02-76.08-.21-9.42 8.21-17.9 17.63-17.72 9.13-.35 17.35 7.36 18.02 16.4v121.96c-.68 8.43-7.78 15.53-16.17 16.37H373.84c-9.12-.58-16.93-8.86-16.57-18.05-.15-9.4 8.28-17.8 17.68-17.6 25.38-.05 50.77.01 76.15-.03-38.05-38.08-76.12-76.13-114.18-114.19-3.55-3.49-7.58-7.03-8.77-12.09-2.36-7.94 1.77-17.07 9.21-20.65z"></path>
+   </g>
+   <g id="icon-cart">
+     <path d="M98.14 35.25c29.17-9.7 61.76-9.94 90.65.94C216.1 46.47 239.02 66.26 256 89.71c18.5-25.65 44.33-46.87 74.89-56.12 27.43-8.34 57.44-7.11 84.48 2.14 27.92 9.6 52.28 28.69 68.87 53.03 18.24 26.44 27.26 58.59 27.76 90.55v5.34c-.42 21.3-4.9 42.49-13.24 62.09-12.96 30.72-33.87 57.31-56.68 81.32-23.8 24.92-49.69 47.73-75.73 70.25-29.92 25.74-60.07 51.2-89.81 77.15-11.04 10.59-30.02 10.64-41.04 0-37-32.35-74.77-63.79-111.7-96.22-27.97-25-55.78-50.54-79.02-80.12-18.18-23.27-33.25-49.57-40.18-78.48C1.78 209.16.4 197.38 0 185.58v-7.18c.67-32.59 10.24-65.35 29.37-91.95C46.2 62.77 70.5 44.37 98.14 35.25m26.78 24.2c-24.91 3.87-48.17 16.96-64.58 36.08-21.92 25.22-31.69 59.47-30.2 92.53.89 25.64 10.02 50.42 23.69 71.94 20.09 31.76 47.45 57.96 74.86 83.33 41.66 37.6 85.08 73.18 127.27 110.17 15.52-13.35 30.96-26.8 46.57-40.03 27.77-23.85 55.86-47.34 82.87-72.05 25.79-23.93 51.37-48.7 70.75-78.28 12.66-19.27 22.02-41.07 24.78-64.09 3.67-30.68-2.23-62.92-18.74-89.26-13.14-21.16-33.51-37.9-57.18-45.86-23.99-8.11-51.07-8.27-74.54 1.72-24.95 10.41-44.34 30.93-58.13 53.74-3.15 5.41-9.05 9.1-15.34 9.33-6.92.49-13.8-3.31-17.3-9.26-12.8-21.19-30.31-40.31-52.75-51.35-19.04-9.54-41.12-12.1-62.03-8.66z">
+     </path>
+   </g>
+ </svg>
+
+ <header class="main-header">
+   <div class="container">
+     <div class="main-header__holder">
+       <div class="main-header__block">
+         <div class="main-header__btn">
+           <button></button>
+         </div>
+         <div class="main-nav__toggle">
+           <span class="line-burger"></span>
+         </div>
+         <button class="call main-header__mobile-phone"></button>
+         <button class="call main-header__call">Заказать звонок</button>
+       </div>
+       <div class="main-header__inner">
+         <a href="" class="main-header__logo">Romira</a>
+       </div>
+       <div class="main-header__row">
+         <ul>
+           <li id="qtranslate-3" class="widget qtranxs_widget">
+             <ul class="language-chooser language-chooser-text qtranxs_language_chooser" id="qtranslate-3-chooser">
+               <li class="lang-ru active">
+                 <a href="" lang="ru" title="Рус (ru)" class="qtranxs_text qtranxs_text_ru"><span>Рус</span></a>
+               </li>
+               <li class="lang-ua">
+                 <a href="" lang="ua" title="Рус (ua)" class="qtranxs_text qtranxs_text_гф"><span>Укр</span></a>
+               </li>
+               <li class="lang-en">
+                 <a href="" lang="en" title="Eng (en)" class="qtranxs_text qtranxs_text_en"><span>Eng</span></a>
+               </li>
+             </ul>
+             <div class="qtranxs_widget_end"></div>
+           </li>
+         </ul>
+         <button class="main-header__cart">
+           <svg viewBox="0 0 512 512">
+             <use xlink:href="#icon-cart"></use>
+           </svg>
+         </button>
+       </div>
+     </div>
+     <!--end main-header__holder-->
+     <div class="main-header__user">
+       <div class="main-header__wrap-select select-category">
+         <select name="" id="" data-smart-positioning="false">
+           <option value="0" selected>Все категории</option>
+           <option value="">Категория 1</option>
+           <option value="">Категория 2</option>
+           <option value="">Категория 3</option>
+         </select>
+       </div>
+       <form action="" class="main-header__form">
+         <input placeholder="Поисковый запрос ..." type="text">
+       </form>
+       <button class="main-header__close"></button>
+     </div>
+     <!--end main-header__user-->
+   </div>
+
+   <div class="container">
+     <div class="main-header__navigation">
+       <ul class="main-header__menu">
+         <li><a class="main-header__point" href="">диваны угловые</a></li>
+         <li><a class="main-header__point" href="">Диваны прямые</a></li>
+         <li><a class="main-header__point" href="">Диваны модульные</a></li>
+         <li class="main-header__point dropdown"><a class="main-header__point dropdown-link" href="">Другое</a>
+           <ul class="submenu">
+             <li>
+               <a href="">Кресла</a>
+             </li>
+             <li>
+               <a href="">Кровати</a>
+             </li>
+             <li>
+               <a href="">Аксессуары</a>
+             </li>
+             <li>
+               <a href="">Дополнительные услуги</a>
+             </li>
+           </ul>
+         </li>
+       </ul>
+       <div class="main-header__info">
+         <div class="main-header__mobile">
+           <div class="main-header__icon">
+             <img src="img/icons/mobile-phone.png" alt="">
+           </div>
+           <p class="main-header__text">+38 094 455 45 45</p>
+         </div>
+         <div class="main-header__social">
+           <a href="" class="main-header__item">
+             <svg viewBox="0 0 512 512">
+               <use xlink:href="#icon-brand"></use>
+             </svg>
+           </a>
+           <a href="" class="main-header__item">
+             <svg viewBox="0 0 512 512">
+               <use xlink:href="#icon-telegram"></use>
+             </svg>
+           </a>
+           <a href="" class="main-header__item">
+             <svg viewBox="0 0 29 30">
+               <use xlink:href="#icon-viber"></use>
+             </svg>
+           </a>
+         </div>
+       </div>
+       <!--end main-header__info-->
+     </div>
+     <!--end main-header__navigation-->
+   </div>
+   <!--end container-->
+   </div>
+ </header>
+
+ <section class="page-contacts">
+   <div class="container container--contacts">
+     <ul class="breadcrumbs__list">
+       <li><a href="#">Главная</a></li>
+       <li>Контакты</li>
+     </ul>
+     <h3 class="page-catalog__title">Контакты</h3>
+
+     <form action="" class="page-contacts__form">
+       <div class="page-contacts__holder">
+         <p class="page-contacts__error page-contacts__fail-name" style="display: none;">Некоректное имя</p>
+         <p class="page-contacts__error page-contacts__fail-phone" style="display: none;">Некоректный номер телефона</p>
+       </div>
+       <div class="page-contacts__box">
+         <label for="c_name">Ваше имя</label>
+         <div class="page-contacts__block">
+           <input id="c_name" type="text">
+         </div>
+       </div>
+       <div class="page-contacts__box">
+         <label for="c_phone">Ваше телефон</label>
+         <div class="page-contacts__block">
+           <input type="text" id="c_phone">
+         </div>
+
+       </div>
+       <div class="page-contacts__box">
+         <label for="c_msg">Сообщение</label>
+         <div class="page-contacts__block">
+           <textarea name="" id="c_msg"></textarea>
+         </div>
+       </div>
+       <button class="page-contacts__btn">Отправить</button>
+     </form>
+
+   </div>
+ </section>
+
+ <section class="contacts">
+   <div class="container container--inner">
+     <div class="contacts__wrap">
+       <div class="contacts__item contacts__item--info" style="background-image: url(img/contacts.jpg);">
+         <div class="contacts__block">
+           <h3 class="contacts__title">Контакты</h3>
+           <div class="contacts__user">
+             <div class="contacts__box contacts__box--inner">
+               <div class="contacts__col">
+                 <img src="img/icons/map.png" alt="">
+               </div>
+               <p class="contacts__data">2130 Fulton Street, Сан-Диего, Калифорния 94117-1080 США</p>
+             </div>
+             <div class="contacts__box">
+               <div class="contacts__col">
+                 <img src="img/icons/phone.png" alt="">
+               </div>
+               <p class="contacts__data contacts__data--phone">063 455 45 45</p>
+             </div>
+             <div class="contacts__box contacts__box--inner">
+               <div class="contacts__col">
+                 <img src="img/icons/phone.png" alt="">
+               </div>
+               <p class="contacts__data contacts__data--phone">063 455 45 45</p>
+             </div>
+             <div class="contacts__box">
+               <div class="contacts__col">
+                 <img src="img/icons/envelope.png" alt="">
+               </div>
+               <p class="contacts__data">info@demolink.org</p>
+             </div>
+
+           </div>
+           <!--end contacts__user-->
+         </div>
+       </div>
+       <div class="contacts__item contacts__item--data">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.0872634725315!2d-117.16974238533548!3d32.78994539063428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d955516221f3ef%3A0x1313443aa10bc67e!2sTechno%20Bili%C5%9Fim!5e0!3m2!1sru!2sua!4v1587988168550!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+       </div>
+
+     </div>
+     <!--end contacts__wrap-->
+   </div>
+ </section>
+
+ <footer class="main-footer">
+   <div class="container">
+     <a href="" class="main-footer__logo">Romira</a>
+     <div class="main-footer__social">
+       <a href="" class="main-footer__item">
+         <svg viewBox="0 0 512 512">
+           <use xlink:href="#icon-brand"></use>
+         </svg>
+       </a>
+       <a href="" class="main-footer__item">
+         <svg viewBox="0 0 512 512">
+           <use xlink:href="#icon-telegram"></use>
+         </svg>
+       </a>
+       <a href="" class="main-footer__item">
+         <svg viewBox="0 0 29 30">
+           <use xlink:href="#icon-viber"></use>
+         </svg>
+       </a>
+     </div>
+     <div class="main-footer__desc">
+       <p>Любое копирование с сайта без обратной ссылки запрещено. разработано </p>
+     </div>
+   </div>
+ </footer>
+
+ <div class="popup popup__menu">
+   <div class="popup__block">
+     <div class="popup__item popup__item--info">
+       <p class="popup__desc">Меню</p>
+       <ul class="popup__list">
+         <li>
+           <a class="popup__link" href="https://qna.habr.com/">Главная</a>
+         </li>
+         <li>
+           <a class="popup__link " href="">О компании</a>
+         </li>
+         <li>
+           <a class="popup__link" href="">Каталог</a>
+           <ul class="popup__submenu level-one">
+             <li>
+               <a href="">Диваны угловые</a>
+             </li>
+             <li>
+               <a href="">Диваны прямые</a>
+             </li>
+             <li>
+               <a href="">Диваны модульные</a>
+             </li>
+             <li>
+               <a href="">Другое</a>
+               <ul class="popup__submenu level-two">
+                 <li>
+                   <a href="">Кресла</a>
+                 </li>
+                 <li>
+                   <a href="">Кровати</a>
+                 </li>
+                 <li>
+                   <a href="">Аксессуары</a>
+                 </li>
+                 <li>
+                   <a href="">Дополнительные услуги</a>
+                 </li>
+               </ul>
+             </li>
+           </ul>
+         </li>
+         <li>
+           <a class="popup__link" href="">Доставка</a>
+         </li>
+         <li>
+           <a class="popup__link" href="">Оплата</a>
+         </li>
+         <li>
+           <a class="popup__link" href="">Сотрудничество</a>
+         </li>
+         <li>
+           <a class="popup__link" href="">Публикации</a>
+         </li>
+         <li>
+           <a class="popup__link" href="">Контакты</a>
+         </li>
+       </ul>
+     </div>
+     <div class="popup__item popup__item--contacts">
+       <a href="" class="popup__logo">Romira</a>
+       <div class="popup__text">
+         <p>Интерьер Студия была основана в 1993 году и стала на местном и национальном уровне признанной ведущей фирмой по дизайну интерьера. Инновационные технологии, индивидуальная планировка интерьера и безупречный сервис позволили нам стремительно расти к успеху и поддерживать сильную и лояльную клиентуру.</p>
+       </div>
+       <h3 class="popup__subtitle">Контакты</h3>
+       <div class="popup__user">
+         <div class="contacts__box contacts__box--inner">
+           <div class="contacts__col">
+             <img src="img/icons/map.png" alt="">
+           </div>
+           <p class="contacts__data">2130 Fulton Street, Сан-Диего, Калифорния 94117-1080 США</p>
+         </div>
+         <div class="contacts__box">
+           <div class="contacts__col">
+             <img src="img/icons/phone.png" alt="">
+           </div>
+           <p class="contacts__data contacts__data--phone">063 455 45 45</p>
+         </div>
+         <div class="contacts__box contacts__box--inner">
+           <div class="contacts__col">
+             <img src="img/icons/phone.png" alt="">
+           </div>
+           <p class="contacts__data contacts__data--phone">063 455 45 45</p>
+         </div>
+         <div class="contacts__box">
+           <div class="contacts__col">
+             <img src="img/icons/envelope.png" alt="">
+           </div>
+           <p class="contacts__data">info@demolink.org</p>
+         </div>
+
+       </div>
+       <!--end popup__user-->
+     </div>
+     <!--end popup__item-->
+   </div>
+ </div>
+
+ <div class="popup popup__reqcall">
+   <div class="reqcall__wrap">
+     <div class="popup__close"></div>
+     <div class="reqcall__container">
+       <div class="reqcall__inner">
+         <h3 class="reqcall__title">Заказать звонок</h3>
+         <form action="" class="reqcall__form">
+           <div class="reqcall__row">
+             <div class="select__wrap select__hour" id="select__hour">
+               <div class="select__placeholder"></div>
+               <ul class="select__list">
+                 <li class="select__item" data-value="00">00</li>
+                 <li class="select__item" data-value="01">01</li>
+                 <li class="select__item" data-value="02">02</li>
+                 <li class="select__item" data-value="03">03</li>
+                 <li class="select__item" data-value="04">04</li>
+                 <li class="select__item" data-value="05">05</li>
+                 <li class="select__item" data-value="06">06</li>
+                 <li class="select__item" data-value="07">07</li>
+                 <li class="select__item" data-value="08">08</li>
+                 <li class="select__item" data-value="09">09</li>
+                 <li class="select__item" data-value="10">10</li>
+                 <li class="select__item" data-value="11">11</li>
+                 <li class="select__item" data-value="12">12</li>
+                 <li class="select__item" data-value="13">13</li>
+                 <li class="select__item" data-value="14">14</li>
+                 <li class="select__item" data-value="15">15</li>
+                 <li class="select__item" data-value="16">16</li>
+                 <li class="select__item" data-value="17">17</li>
+                 <li class="select__item" data-value="18">18</li>
+                 <li class="select__item" data-value="19">19</li>
+                 <li class="select__item" data-value="20">20</li>
+                 <li class="select__item" data-value="21">21</li>
+                 <li class="select__item" data-value="22">22</li>
+                 <li class="select__item" data-value="23">23</li>
+               </ul>
+             </div>
+             <div class="select__wrap select__minute" id="select__minute">
+               <div class="select__placeholder"></div>
+               <ul class="select__list">
+                 <li class="select__item" data-value="00">00</li>
+                 <li class="select__item" data-value="05">05</li>
+                 <li class="select__item" data-value="10">10</li>
+                 <li class="select__item" data-value="15">15</li>
+                 <li class="select__item" data-value="20">20</li>
+                 <li class="select__item" data-value="25">25</li>
+                 <li class="select__item" data-value="30">30</li>
+                 <li class="select__item" data-value="35">35</li>
+                 <li class="select__item" data-value="40">40</li>
+                 <li class="select__item" data-value="45">45</li>
+                 <li class="select__item" data-value="50">50</li>
+                 <li class="select__item" data-value="55">55</li>
+               </ul>
+             </div>
+             <div class="select__wrap select__day" id="select__day">
+               <div class="select__placeholder"></div>
+               <ul class="select__list">
+                 <li class="select__item" data-value="Сегодня">Сегодня</li>
+                 <li class="select__item" data-value="Завтра">Завтра</li>
+                 <li class="select__item" data-value="Послезавтра">Послезавтра</li>
+               </ul>
+             </div>
+           </div>
+           <div class="reqcall__error">Неверный номер телефона</div>
+           <div class="reqcall__row">
+             <input type="tel" class="reqcall__input" placeholder="Номер телефона">
+             <button class="reqcall__btn">Отправить</button>
+           </div>
+         </form>
+         <p class="reqcall__example">Например: 093 000 00 00</p>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<script src="fonts/font-awesome.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+	</body>
+</html>

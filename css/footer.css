@@ -1,0 +1,118 @@
+.main-footer {
+	margin-bottom: 12px;
+}
+
+.main-footer__logo {
+	display: block;
+	position: relative;
+	max-width: 210px;
+	font-size: 48px;
+	line-height: 1;
+	color: #3d4852;
+	text-align: center;
+	margin: 0 auto;
+	font-weight: 200;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+
+.main-footer__logo:after {
+	position: absolute;
+	content: ' ';
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 3px;
+	width: 3px;
+	height: -webkit-calc(100% - 14px);
+	height: calc(100% - 14px);
+	background-color: #B58B59;
+}
+
+.main-footer__desc p {
+	font-size: 10px;
+	line-height: 2.1;
+	color: #b2b7bc;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 200;
+}
+
+.main-footer__desc p a {
+	color: #b2b7bc;
+	-webkit-transition: 0.3s color;
+	-o-transition: 0.3s color;
+	transition: 0.3s color;
+}
+
+.main-footer__desc p a:hover {
+	color: #382b1b;
+}
+
+.main-footer__social {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.main-footer__item {
+	margin: 0 10px;
+	margin-bottom: 25px;
+}
+
+.main-footer__item svg {
+	width: 30px;
+	height: 30px;
+	fill: #b58b59;
+	-webkit-transition: 0.3s fill;
+	-o-transition: 0.3s fill;
+	transition: 0.3s fill;
+}
+
+.main-footer__item svg:hover {
+	fill: #4d3b25;
+}
+
+.msg-modal {
+	position: fixed;
+	top: 30%;
+	left: -webkit-calc(50% - 150px);
+	left: calc(50% - 150px);
+	width: 300px;
+	padding: 20px 30px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	text-align: center;
+	background-color: #851216;
+	color: #fff;
+	opacity: 0;
+	visibility: hidden;
+	font-size: 18px;
+	line-height: 1.5;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	z-index: 20;
+	-webkit-transition: 0.3s visibility, 0.3s opacity;
+	-o-transition: 0.3s visibility, 0.3s opacity;
+	transition: 0.3s visibility, 0.3s opacity;
+}
+
+.msg-modal-active {
+	opacity: 1;
+	visibility: visible;
+}
+
+@media screen and (max-width: 960px) {
+
+.main-footer__desc p {
+	line-height: 1.6;
+}
+
+}
+
